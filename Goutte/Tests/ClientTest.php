@@ -12,12 +12,12 @@
 namespace Goutte\Tests;
 
 use Goutte\Client;
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Psr7\Response as GuzzleResponse;
-use GuzzleHttp\Middleware;
+use GuzzleHttp6\Client as GuzzleClient;
+use GuzzleHttp6\Exception\RequestException;
+use GuzzleHttp6\Handler\MockHandler;
+use GuzzleHttp6\HandlerStack;
+use GuzzleHttp6\Psr7\Response as GuzzleResponse;
+use GuzzleHttp6\Middleware;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\BrowserKit\Cookie;
 
@@ -50,7 +50,7 @@ class ClientTest extends TestCase
     public function testCreatesDefaultClient()
     {
         $client = new Client();
-        $this->assertInstanceOf('GuzzleHttp\\ClientInterface', $client->getClient());
+        $this->assertInstanceOf('GuzzleHttp6\\ClientInterface', $client->getClient());
     }
 
     public function testUsesCustomClient()
@@ -339,7 +339,7 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \GuzzleHttp6\Exception\RequestException
      */
     public function testNullResponseException()
     {

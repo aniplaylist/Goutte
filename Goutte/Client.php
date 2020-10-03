@@ -11,10 +11,10 @@
 
 namespace Goutte;
 
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\ClientInterface as GuzzleClientInterface;
-use GuzzleHttp\Cookie\CookieJar;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp6\Client as GuzzleClient;
+use GuzzleHttp6\ClientInterface as GuzzleClientInterface;
+use GuzzleHttp6\Cookie\CookieJar;
+use GuzzleHttp6\Exception\RequestException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
 use Symfony\Component\BrowserKit\Client as BaseClient;
